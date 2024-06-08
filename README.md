@@ -1,6 +1,6 @@
-### **ATIVIDADE SUPERVISIONADA: ABORDA O TEMA CRIPTOGRAFIA UTILIZANDO TÉCNICAS DE ÁLGEBRA LINEAR**
+### **ATIVIDADE SUPERVISIONADA: ABORDA O TEMA CRIPTOGRAFIA UTILIZANDO TÉCNICAS DE ÁLGEBRA LINEAR**  
 
-
+  
 Este projeto implementa a criptografia e descriptografia de palavras usando técnicas de álgebra linear em linguagem C. O programa é dividido em dois módulos:
 
 
