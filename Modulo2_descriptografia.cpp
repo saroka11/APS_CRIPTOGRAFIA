@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#define tam 27 // Tamanho da tabela hash (26 letras do alfabeto + espaÁo em branco)
+#define tam 27 // Tamanho da tabela hash (26 letras do alfabeto + espa√ßo em branco)
 #define ordem 3 // tamanho da matriz C e identidade
 #define LINHA_T 3 
 #define COLUNA_T 2
@@ -17,26 +17,25 @@ typedef struct Hash {
 
 Hash tabelaDeConversao[tam];
 
-
-// funÁ„o para impress„o das matrizes
+// fun√ß√£o para impress√£o das matrizes
 void imprimirMatriz(float matriz[][COLUNA_T])
 {
-
-	for(i = 0; i < LINHA_T; i++){
-		for(j = 0; j < COLUNA_T; j++)
-		{
-			if (j==0)
-			printf("|%.0f ", matriz[i][j]);
-			else
-			printf(" %.0f|", matriz[i][j]);
-		}
-
-		printf("\n");
+for(i = 0; i < LINHA_T; i++)
+{
+	for(j = 0; j < COLUNA_T; j++)
+	{
+		if (j==0)
+		printf("|%.0f ", matriz[i][j]);
+		else
+		printf(" %.0f|", matriz[i][j]);
 	}
+
+	printf("\n");
+}
 }
 
 
-// funÁ„o para inicializar a tabela hash: 
+// fun√ß√£o para inicializar a tabela hash: 
 void inicializarTabelaHash() 
 {
   for (i = 0; i < tam; i++) 
@@ -44,7 +43,7 @@ void inicializarTabelaHash()
     tabelaDeConversao[i].chave = i;
     if (i == 0) 
     {
-      tabelaDeConversao[i].valor = ' '; // EspaÁo em branco
+      tabelaDeConversao[i].valor = ' '; // Espa√ßo em branco
     } else {
       tabelaDeConversao[i].valor = 'a' + i - 1; // as letras de a-z
     }
@@ -52,20 +51,20 @@ void inicializarTabelaHash()
 }
 
 
-// funÁ„o hash pra calcular indice
+// fun√ß√£o hash pra calcular indice
 int funcaoHash(char *chave)
 {
 unsigned int hash = 0; // garantir que vai ser sempre positivo
 
   for (i = 0; chave[i] != '\0'; i++) 
   {
-    hash += (int)chave[i] * (i + 1); // pegando o codigo e multiplicando pela posiÁ„o
+    hash += (int)chave[i] * (i + 1); // pegando o codigo e multiplicando pela posi√ß√£o
   }
   return hash % tam;
 }
 
 
-// funÁ„o para multiplicar matriz
+// fun√ß√£o para multiplicar matriz
 void multiplicarMatrizes(float resultado[][COLUNA_T], float matrizA[][ordem], float matrizB[][COLUNA_T])
 {
 	for (i=0; i < 3; i++) 
@@ -80,7 +79,7 @@ void multiplicarMatrizes(float resultado[][COLUNA_T], float matrizA[][ordem], fl
 
 
 
-// funÁ„o que recebe uma chave e devolve o valor: 
+// fun√ß√£o que recebe uma chave e devolve o valor: 
 char buscarLetra(int chave) 
 {
   if (chave >= 1 && chave <= 26) 
@@ -134,20 +133,20 @@ for(i=0; i < ordem; i++)
 num=0;
 	
 	
-// calculando a matriz inversa de C (com eliminaÁ„o de Gauss-Jordan)
+// calculando a matriz inversa de C (com elimina√ß√£o de Gauss-Jordan)
 for(j=0; j < ordem; j++)
 {	
-	// encontra o pivÙ
+	// encontra o piv√¥
 	pivo = matriz_C[j][j];
 	
-	// Divide a linha do pivÙ por ele
+	// Divide a linha do piv√¥ por ele
     for (int k = 0; k < ordem; k++) 
 	{
 		matriz_C[j][k] /= pivo; 
 		id[j][k] /= pivo; 
 	}
 	
-	// Elimina os outros elementos da coluna do pivÙ
+	// Elimina os outros elementos da coluna do piv√¥
 		for(i=0; i < ordem; i++)
 		{
 			if(i != j)
