@@ -8,7 +8,7 @@ Este projeto implementa a criptografia e descriptografia de palavras usando téc
 
 O programa recebe uma palavra do usuário, de até 6 letras, e coloca a palavra como elementos de uma Matriz 3x2 na ordem ilustrada abaixo.  
   
-Depois faz a substituição de cada letra pelo número indicado na tabela de conversão, criando assim uma nova matriz númerica.  
+Depois é feita a substituição de cada letra pelo número indicado na tabela de conversão, criando assim uma nova matriz númerica.  
 
 
 `Tabela de Conversão e formato que a matriz3x2 deve ficar:`
